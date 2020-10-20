@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply whitespace-no-wrap py-2 px-4 text-gray-600 font-medium rounded
+    transition-colors duration-100 ease-in-out;
+
+  &:hover,
+  &.active {
+    @apply text-black;
+  }
+
+  &.primary {
+    @apply bg-green-700 text-white;
+
+    &:hover,
+    &:focus {
+      @apply bg-green-600;
+    }
+  }
+
+  &:disabled {
+    @apply opacity-50 pointer-events-none;
+  }
+}
+
+*::selection {
+  @apply bg-green-400 text-white;
+}
