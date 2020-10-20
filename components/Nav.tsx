@@ -1,13 +1,21 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
+import useLocalStorage from "../hooks/useLocalStorage";
 import Modal from "./Modal";
 
 export default function Nav() {
   const lexolveLogo = require("../public/logo.png");
 
-  const [session, setSession] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  const [session, setSession] = useLocalStorage("loggedIn", false);
+
+  const [showModal, setShowModal] = useState<boolean>(false);
+
+  useEffect(() => {
+    setSession(
+      window.localStorage.getItem("loggedIn") == "true" ? true : false
+    );
+  }, []);
 
   useEffect(() => {
     if (session) {
@@ -28,7 +36,7 @@ export default function Nav() {
             {session ? (
               <>
                 <Link href="/">
-                  <button className="btn" onClick={() => setSession(!session)}>
+                  <button className="btn" onClick={() => setSession(false)}>
                     Log out
                   </button>
                 </Link>
@@ -37,7 +45,7 @@ export default function Nav() {
               <>
                 <button
                   className="btn primary "
-                  onClick={() => setSession(!session)}
+                  onClick={() => setSession(true)}
                 >
                   Log In
                 </button>
