@@ -34,22 +34,13 @@ export default function Nav() {
         <ul className="flex flex-row items-center">
           <li>
             {session ? (
-              <>
-                <Link href="/">
-                  <button className="btn" onClick={() => setSession(false)}>
-                    Log out
-                  </button>
-                </Link>
-              </>
+              <button className="btn" onClick={() => setSession(false)}>
+                Log out
+              </button>
             ) : (
-              <>
-                <button
-                  className="btn primary "
-                  onClick={() => setSession(true)}
-                >
-                  Log In
-                </button>
-              </>
+              <button className="btn primary" onClick={() => setSession(true)}>
+                Log In
+              </button>
             )}
           </li>
         </ul>
