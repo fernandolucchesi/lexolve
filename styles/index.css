@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.section {
+  @apply flex flex-wrap items-center mx-auto py-20 px-4;
+}
+
 .btn {
   @apply whitespace-no-wrap py-2 px-4 text-gray-600 font-medium rounded
     transition-colors duration-100 ease-in-out;

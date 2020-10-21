@@ -24,8 +24,8 @@ export default function Nav() {
   }, [session]);
 
   return (
-    <header className="bg-white border-b border-gray-200 fixed top-0 inset-x-0 z-100 ">
-      <nav className="container justify-between m-auto flex items-center h-16 px-4 sm:px-0">
+    <header className="bg-white border-b border-gray-200 fixed top-0 px-4 inset-x-0">
+      <nav className="container justify-between m-auto flex items-center h-16 sm:px-0">
         <Link href="/">
           <a href="home">
             <img src={lexolveLogo} width="140" alt="Lexolve logo" />
@@ -47,7 +47,7 @@ export default function Nav() {
       </nav>
       {showModal && (
         <Modal
-          headline="You are now logged in!"
+          headline="You are logged in!"
           onClose={() => setShowModal(false)}
         />
       )}

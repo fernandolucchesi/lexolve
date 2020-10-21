@@ -25,7 +25,7 @@ export default function RouterProgress() {
         }
 
         #nprogress .bar {
-          background: black;
+          background: #2f855a;
           position: fixed;
           z-index: 1031;
           top: 0;

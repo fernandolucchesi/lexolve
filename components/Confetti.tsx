@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 function Confetti() {
   useEffect(() => {
-    const end = Date.now() + 2 * 1000;
+    const end = Date.now() + 5 * 1000;
     const colors = ["#2f855a", "#ffa500"];
 
     function frame() {

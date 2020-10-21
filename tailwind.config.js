@@ -5,6 +5,9 @@ module.exports = {
   },
   purge: ["./{components,hoc,pages}/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      'raleway': ['raleway', 'sans-serif'],
+    },
     extend: {},
   },
   variants: {},
