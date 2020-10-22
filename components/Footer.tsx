@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Confetti from "./Confetti";
 
 function Footer() {
-  const [show, setShow] = useState(false);
-
   return (
     <>
       <div className="bg-gray-900 h-64"></div>
@@ -14,7 +12,7 @@ function Footer() {
             <a href="mailto:feelucchesi@gmail.com">
               <span
                 className="font-bold hover:text-orange-500"
-                onClick={() => setShow(true)}
+                onClick={() => Confetti()}
               >
                 Hire me
               </span>{" "}
@@ -38,7 +36,6 @@ function Footer() {
           </a>
         </div>
       </footer>
-      {show && <Confetti />}
     </>
   );
 }
