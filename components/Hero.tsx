@@ -7,13 +7,11 @@ function Hero() {
         <h1 className="text-4xl md:text-5xl lg:pr-24 font-raleway font-black">
           Save money and time in your business!
         </h1>
-        <p className="mt-4 text-lg leading-8 muted">
+        <p className="mt-4 text-lg leading-8">
           Lexolve gives your business{" "}
           <span className="font-semibold">superpowers</span> to solve
         </p>
-        <p className="leading-8 text-lg muted">
-          legal needs easily and efficiently!
-        </p>
+        <p className="leading-8 text-lg">legal needs easily and efficiently!</p>
         <button className="mt-8 btn primary">Start now</button>
       </div>
       <div className="w-full hidden md:block md:w-1/2 ">
