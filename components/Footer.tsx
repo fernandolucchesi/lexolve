@@ -17,7 +17,7 @@ function Footer() {
                 Hire me
               </span>{" "}
             </a>
-            at @ Lexolve
+            @ Lexolve
           </div>
           <div className="flex justify-center items-center mt-4 lg:mt-0" />
           <a
